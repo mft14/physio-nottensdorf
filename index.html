@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="https://www.physio-nottensdorf.de/assets/favicon.png">
     <link href="https://www.physio-nottensdorf.de/src/custom.css" rel="stylesheet">
     <script src="https://www.physio-nottensdorf.de/src/maplibre-gl.js"></script>
-    <link href="https://www.physio-nottensdorf.de/src/maplibre-gl.css" rel="stylesheet" />
+    <link href="https://www.physio-nottensdorf.de/src/maplibre-gl.css" rel="stylesheet">
     <script type="module" src="https://www.physio-nottensdorf.de/cookieconsent-config.js"></script>
     <link rel="stylesheet" href="https://www.physio-nottensdorf.de/src/cookieconsent.css">
     
@@ -43,13 +43,13 @@
 <main>
     <!-- Slider -->
     <div class="slider-container">
-        <div id="slider" class="slider">
-            <img src="https://www.physio-nottensdorf.de/assets/header_collage1.jpg" alt="Bild 1" class="slider-image fade-in" />
-            <img src="https://www.physio-nottensdorf.de/assets/header_collage2.jpg" alt="Bild 2" class="slider-image fade-in" />
+        <div id="slider" class="slider"> <!-- logic in JS, see footer -->
+            <img src="https://www.physio-nottensdorf.de/assets/header_collage1.jpg" alt="Bild 1" class="slider-image fade-in">
+            <img src="https://www.physio-nottensdorf.de/assets/header_collage2.jpg" alt="Bild 2" class="slider-image fade-in">
         </div>
     </div>
 
-    <img src="https://www.physio-nottensdorf.de/assets/logo.png" id="praxislogo" alt="Logo" class="praxis-logo" />
+    <img src="https://www.physio-nottensdorf.de/assets/logo.png" id="praxislogo" alt="Logo" class="praxis-logo">
 
     <!-- Grid -->
     <div class="grid-container">
@@ -62,10 +62,12 @@
                 Tel: <a href="tel:04163900507">04163 900507</a><br>
                 Email: <a href="mailto:physio-nottensdorf@hotmail.com">physio-nottensdorf@hotmail.com</a><br>
             </p>
-            <p><h5>Team</h5>
+            <h5 class="txt-darkgreen-500">Team</h5>
+            <p>
                 Julia Kampmeier<br>
                 Andrea Orlowski<br>
-                Julitha Trapp</p>
+                Julitha Trapp
+            </p>
         </div>
 
         <!-- Öffnungszeiten -->
