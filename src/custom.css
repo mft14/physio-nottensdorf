@@ -1,0 +1,414 @@
+:root {
+  /* Base Colors */
+  --color-blue:              #115ea6;
+  --color-blue-hover:        #0f5c8b;
+  --color-links:             #125ee6;
+  --color-links-hover:       #829e16;
+
+		/* Farben, bevor ich das Logo bekommen habe */
+  /* --color-lightgreen:        #c6c9bb; */
+  /* --color-lightgreen-hover:  #f6f7f5; */
+
+		/* Die eigentlichen echten Farben */
+  --color-darkgreen:         #008591;
+  --color-lightgreen:        #b1ceb9;
+  --color-lightgreen-hover:  #f6f7f5;
+  --color-tr-border:         #dde2e5;
+
+	--color-lightgrey:         #f6f7f5;
+}
+
+
+/* Colors */
+/* Modal Background */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    max-height: 90vh;
+    border-radius: 8px;
+    position: relative;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Close Button (X) */
+.modal-close-x {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+    line-height: 1;
+}
+
+.modal-close-x:hover {
+    color: var(--color-darkgreen);
+}
+
+/* Modal Title */
+.modal-title {
+    font-size: 24px;
+    color: var(--color-darkgreen-500);
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Modal Body Text */
+.modal-body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    flex-grow: 1;
+}
+
+/* Modal Footer Button */
+.modal-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-close-modal {
+    color: var(--color-darkgreen);
+    padding: 8px 16px;
+    border: 1px solid var(--color-darkgreen);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-close-modal:hover {
+	background-color: var(--color-darkgreen);
+	color: var(--color-lightgrey);
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 25px;
+    }
+    .modal-title {
+        font-size: 20px;
+    }
+}
+
+/* Reset and Base Styles */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.6;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+/* .comment   { color:            var(--color-comment); } */
+/* .selection { background-color: var(--color-selection); } */
+
+.bg-blue-500 { background-color: var(--color-blue); }
+.bg-green-500 { background-color: var(--color-lightgreen); }
+.bg-darkgreen-500 { background-color: var(--color-darkgreen); }
+/* .bg-blue-500:hover { background-color: var(--color-blue-hover); } */
+/* .bg-green-500:hover { background-color: var(--color-lightgreen-hover); } */
+
+.txt-blue-500 { color: var(--color-blue); }
+.txt-blue-500:hover { color: var(--color-blue-hover); }
+.txt-green-500 { color: #c6c9bb; }
+.txt-green-500:hover { color: #b3b6a6; }
+.txt-green-600 { color: #b3b6a6; }
+.txt-darkgreen-500 { color: var(--color-darkgreen); }
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+.fade-in { animation: fadeIn 1s ease-in-out; }
+.text-center { text-align: center;}
+.text-justify { text-align: justify;}
+
+/* Topbar Styles */
+#topbar {
+	background-color: var(--color-darkgreen);
+	color: white;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.topbar-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 1rem;
+}
+
+.topbar-link {
+	color: white;
+	text-decoration: none;
+}
+
+.topbar-link:hover {
+	text-decoration: underline;
+}
+
+.topbar-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* Slider Styles */
+.slider-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-height: 700px;
+}
+
+.slider {
+	display: flex;
+	transition: transform 2s ease-linear;
+}
+
+.slider-image {
+	width: 100%;
+	flex-shrink: 0;
+	object-fit: cover;
+}
+
+/* Logo */
+.praxis-logo {
+	margin: 2.5rem auto;
+	max-width: 600px;
+	height: auto;
+	display: block;
+}
+
+/* Grid Container */
+.grid-container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 1rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+
+@media (min-width: 640px) {
+	.grid-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Kachel */
+.kachel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  /* margin: 1rem; */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-lightgreen-hover);
+  min-height: 450px;
+}
+
+.kachelblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+max-width: 1000px;
+  /* padding: 1rem; */
+  /* margin: 1rem; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+		margin: 0 auto;
+		background-color: var(--color-lightgreen-hover);
+}
+
+h5 {
+	border-bottom: 1px solid var(--color-darkgreen);
+	font-size: 1.3em;
+}
+
+.uberschrift, h1  {
+		font-size: 2.2rem;
+		font-weight: 700;
+		margin-top: 1rem;
+		border-bottom: 1px solid var(--lightgreen);
+		color: var(--color-darkgreen);
+}
+
+.uberschrift2, h2  {
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-top: 1rem;
+		color: var(--color-darkgreen);
+}
+
+.uberschrift3, h3  {
+		font-size: 1.1rem;
+		font-weight: 500;
+		margin-top: 1rem;
+		text-decoration: underline;
+		color: var(--color-darkgreen);
+}
+
+.uberschrift4, h4  {
+		font-weight: bold;
+		margin-top: 1rem;
+		color: var(--color-darkgreen);
+}
+
+/* Table Styles */
+.table-cell-left {
+	padding-right: 0.5rem;
+}
+
+.table-cell-bold {
+	font-weight: bold;
+}
+
+.txt- {
+	font-weight: bold;
+}
+
+/* Quote Styles */
+.quote-block {
+	font-size: 1.25rem;
+	font-style: italic;
+	font-weight: 600;
+	color: #6b7280;
+}
+
+.quote-icon {
+	width: 2rem;
+	height: 2rem;
+	color: #b3b6a6;
+	margin-bottom: 1rem;
+}
+
+.quote-text {
+	color: #b3b6a6;
+}
+
+.quote-author {
+	font-size: 0.875rem;
+	color: #b3b6a6;
+}
+
+/* Service List */
+.service-list {
+	list-style: disc;
+	padding-left: 1.25rem;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+	color: var(--color-darkgreen);
+}
+
+main a {
+  color: var(--color-darkgreen);
+  text-decoration: none;
+}
+
+main a:hover {
+color: var(--color-lightgreen);
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+	background-color: var(--color-darkgreen);
+	color: var(--color-lightgrey);
+	margin-top: 50px;
+	padding: 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--color-lightgrey);
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+
+	#topbar_tel, #topbar_mail {
+		display: none;
+	}
+
+	/* #topbar { */
+	/* 	display: none; */
+	/* } */
+
+	.footer-content {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	#praxislogo {
+		width: 100%;
+		padding: 0px 20px 0px 20px;
+	}
+
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Physio Nottensdorf</title>
+    <link rel="icon" type="image/png" href="https://www.physio-nottensdorf.de/assets/favicon.png">
+    <link href="https://www.physio-nottensdorf.de/src/custom.css" rel="stylesheet">
+    <script src="https://www.physio-nottensdorf.de/src/maplibre-gl.js"></script>
+    <link href="https://www.physio-nottensdorf.de/src/maplibre-gl.css" rel="stylesheet" />
+    <script type="module" src="https://www.physio-nottensdorf.de/cookieconsent-config.js"></script>
+    <link rel="stylesheet" href="https://www.physio-nottensdorf.de/src/cookieconsent.css">
+    
+</head>
+<body>
+    <header id="topbar">
+        <div class="topbar-container">
+            <a href="tel:04163900507" class="topbar-link">
+                <div class="topbar-item">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.3308 15.9402L15.6608 14.6101C15.8655 14.403 16.1092 14.2384 16.3778 14.1262C16.6465 14.014 16.9347 13.9563 17.2258 13.9563C17.517 13.9563 17.8052 14.014 18.0739 14.1262C18.3425 14.2384 18.5862 14.403 18.7908 14.6101L20.3508 16.1702C20.5579 16.3748 20.7224 16.6183 20.8346 16.887C20.9468 17.1556 21.0046 17.444 21.0046 17.7351C21.0046 18.0263 20.9468 18.3146 20.8346 18.5833C20.7224 18.8519 20.5579 19.0954 20.3508 19.3L19.6408 20.02C19.1516 20.514 18.5189 20.841 17.8329 20.9541C17.1469 21.0672 16.4427 20.9609 15.8208 20.6501C10.4691 17.8952 6.11008 13.5396 3.35083 8.19019C3.03976 7.56761 2.93414 6.86242 3.04914 6.17603C3.16414 5.48963 3.49384 4.85731 3.99085 4.37012L4.70081 3.65015C5.11674 3.23673 5.67937 3.00464 6.26581 3.00464C6.85225 3.00464 7.41488 3.23673 7.83081 3.65015L9.40082 5.22021C9.81424 5.63615 10.0463 6.19871 10.0463 6.78516C10.0463 7.3716 9.81424 7.93416 9.40082 8.3501L8.0708 9.68018C8.95021 10.8697 9.91617 11.9926 10.9608 13.04C11.9994 14.0804 13.116 15.04 14.3008 15.9102L14.3308 15.9402Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.2109 8.84009C18.0578 8.09677 17.6931 7.41362 17.1609 6.87256C16.6288 6.33149 15.9516 5.95549 15.2109 5.79004" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 7.51001C21.6283 6.19924 20.928 5.00529 19.9655 4.04102C19.003 3.07674 17.8101 2.37408 16.5 2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span id="topbar_tel">04163 900507</span>
+                </div>
+            </a>
+            <a href="mailto:physio-nottensdorf@hotmail.com" class="topbar-link">
+                <div class="topbar-item">
+                    <span id="topbar_mail">physio-nottensdorf@hotmail.com</span>
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 9L13.5 12L18 9" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3 13.5H5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M1 10.5H5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    
+<main>
+    <!-- Slider -->
+    <div class="slider-container">
+        <div id="slider" class="slider">
+            <img src="https://www.physio-nottensdorf.de/assets/header_collage1.jpg" alt="Bild 1" class="slider-image fade-in" />
+            <img src="https://www.physio-nottensdorf.de/assets/header_collage2.jpg" alt="Bild 2" class="slider-image fade-in" />
+        </div>
+    </div>
+
+    <img src="https://www.physio-nottensdorf.de/assets/logo.png" id="praxislogo" alt="Logo" class="praxis-logo" />
+
+    <!-- Grid -->
+    <div class="grid-container">
+        <!-- Kontakt -->
+        <div class="kachel fade-in text-center">
+            <div class="uberschrift">Kontakt</div>
+            <p>
+                Am Gutspark 7<br>
+                21640 Nottensdorf<br>
+                Tel: <a href="tel:04163900507">04163 900507</a><br>
+                Email: <a href="mailto:physio-nottensdorf@hotmail.com">physio-nottensdorf@hotmail.com</a><br>
+            </p>
+            <p><h5>Team</h5>
+                Julia Kampmeier<br>
+                Andrea Orlowski<br>
+                Julitha Trapp</p>
+        </div>
+
+        <!-- Öffnungszeiten -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Öffnungszeiten</div>
+            <table class="opening-hours-table" style="width: 100%;">
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="1">
+                    <td class="table-cell-left">Mo:</td>
+                    <td>08:00 - 14:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="2">
+                    <td class="table-cell-left">Di:</td>
+                    <td>09:30 - 12:30 Uhr + 14:00 - 19:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="3">
+                    <td class="table-cell-left">Mi:</td>
+                    <td>07:30 - 14:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="4">
+                    <td class="table-cell-left">Do:</td>
+                    <td>09:30 - 12:30 Uhr + 14:00 - 19:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="5">
+                    <td class="table-cell-left">Fr:</td>
+                    <td>07:30 - 13:30 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="6">
+                    <td class="table-cell-left">Sa:</td>
+                    <td>geschlossen</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="7">
+                    <td class="table-cell-left">So:</td>
+                    <td>geschlossen</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Über Uns -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Über Uns</div>
+            <p class="text-justify">
+                Unsere Praxis steht für eine umfassende und ganzheitliche Betreuung unserer Patienten und vielen Sportlern aus verschiedenen Bereichen. 
+                Parallel oder im Anschluss an die Behandlung verhelfen wir unseren Patienten mit modernen und gezielten physiotherapeutischen Maßnahmen 
+                zur Linderung der Beschwerden bis hin zur vollständigen Genesung.
+                Gehen wir den Weg gemeinsam an.
+            </p>
+        </div>
+
+        <!-- Motto -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Unser Motto</div>
+            <blockquote class="quote-block">
+                <svg class="quote-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+                </svg>
+                <p class="quote-text">Wer nicht jeden Tag etwas Zeit für seine Gesundheit aufbringt, <br>wird eines Tages viel Zeit für seine Krankheit opfern müssen.</p>
+                <p class="quote-author">Sebastian Kneipp</p>
+            </blockquote>
+        </div>
+
+        <!-- Leistungen -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Unser Leistungsangebot</div>
+            <ul class="service-list">
+                <li>Krankengymnastik / Physiotherapie</li>
+                <li>Krankengymnastik am Gerät</li>
+                <li>Skoliosetherapie nach Lehnert Schroth</li>
+                <li>Manuelle Lymphdrainage (nach OP's)</li>
+                <li>Präventionskurs nach § 20 Pilates und Functional Training (Krankenkassenzuschuss)</li>
+                <li>Elektrotherapie</li>
+                <li>Medical Flossing</li>
+                <li>Kinesio Taping</li>
+                <li>Wärme- und Kältetherapie</li>
+            </ul>
+        </div>
+
+        <!-- Karte -->
+        <div id="karte"></div>
+
+        <script type="text/plain" data-category="analytics">
+            // Karte einfügen
+            document.getElementById('karte').innerHTML = `
+                <div class="kachel fade-in">
+                    <div class="uberschrift">Lage der Praxis</div>
+                    <div id="map" style="width: 100%; height: 500px"></div>
+                </div>
+            `;
+
+            const map = new maplibregl.Map({
+                style: 'https://tiles.openfreemap.org/styles/liberty',
+                center: [9.6035, 53.4829],
+                zoom: 17.3,
+                container: 'map',
+            });
+        </script>
+    </div>
+</main>
+
+<script>
+    // Opening Hours Highlighter
+    document.addEventListener("DOMContentLoaded", () => {
+        const now = new Date();
+        let day = now.getDay(); // 0 = So, 1 = Mo, ..., 6 = Sa
+        if (day === 0) day = 7;
+        
+        const row = document.querySelector(`.opening-hours-table tr[data-day="${day}"]`);
+        if (row) {
+            row.querySelectorAll('td').forEach(td => {
+                td.classList.add('txt-darkgreen-500', 'table-cell-bold');
+            });
+        }
+    });
+</script>
+
+
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Physio Nottensdorf</span>
+            <span><a href="#" id="openJobModal" class="footer_link">Stellenangebot</a></span>
+            <span><a href="https://www.physio-nottensdorf.de/impressum/" class="footer_link">Impressum</a></span>
+            <span><a href="https://www.physio-nottensdorf.de/datenschutz/" class="footer_link">Datenschutzerklärung</a></span>
+        </div>
+
+    <!-- Job Anzeige Popup -->
+    <div id="jobModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-x" id="closeX">&times;</button>
+            <div class="uberschrift">Wir suchen</div>
+            <div class="modal-body">
+                <p><strong>Physiotherapeut*in</strong></p>
+                <p><strong>auf Minijob Basis</strong></p>
+                <p><strong>oder Teilzeit (ca. 10-15 Stunden)</strong></p>
+                <p>Bei Interesse Näheres gerne persönlich. Kontaktieren Sie uns einfach unter </p>
+                <p><a class="txt-darkgreen-500" href="mailto:physio-nottensdorf@hotmail.com">physio-nottensdorf@hotmail.com</a></p>
+                <p><small>oder</small></p>
+                <p>Physio & Training Nottensdorf, Am Gutspark 7, 21640 Nottensdorf, 04163/900507</p>
+                <p></p>
+                <p class="table-cell-bold">Wir freuen uns darauf Sie kennenzulernen!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-close-modal" id="closeBtn">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            // Image Slider & Modal Logic
+            document.addEventListener("DOMContentLoaded", () => {
+                // Modal Logic
+                const modal = document.getElementById("jobModal");
+                const closeBtn = document.getElementById("closeBtn");
+                const closeX = document.getElementById("closeX");
+                const openLink = document.getElementById("openJobModal");
+
+                if (modal) {
+                    const openModal = () => {
+                        modal.style.display = "flex";
+                        document.body.style.overflow = "hidden";
+                    };
+
+                    const closeModal = (saveToStorage = false) => {
+                        modal.style.display = "none";
+                        document.body.style.overflow = "";
+                        if (saveToStorage) {
+                            localStorage.setItem("jobAdShown", "true");
+                        }
+                    };
+
+                    // Auto-show logic for home page
+                    const isHomePage = window.location.pathname === "/" || window.location.pathname === "/index.html" || window.location.pathname.endsWith("/");
+                    const hasSeenJobAd = localStorage.getItem("jobAdShown");
+
+                    if (isHomePage && !hasSeenJobAd) {
+                        setTimeout(openModal, 1500); // 1.5 seconds delay
+                    }
+
+                    if (closeBtn) closeBtn.onclick = () => closeModal(true);
+                    if (closeX) closeX.onclick = () => closeModal(true);
+                    if (openLink) {
+                        openLink.onclick = (e) => {
+                            e.preventDefault();
+                            openModal();
+                        };
+                    }
+
+                    window.onclick = (event) => {
+                        if (event.target == modal) {
+                            closeModal(true);
+                        }
+                    };
+                }
+
+                // Slider Logic
+                const slider = document.getElementById("slider");
+                if (slider) {
+                    let index = 0;
+                    function slideImages() {
+                        index = (index + 1) % 2; // Adjust if more images
+                        slider.style.transform = `translateX(-${index * 100}%)`;
+                    }
+                    setInterval(slideImages, 12000); // 12 seconds
+                }
+            });
+        </script>
+    </footer>
+</body>
+</html>
