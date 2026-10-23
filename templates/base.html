@@ -72,32 +72,6 @@
             </div>
         </div>
         
-        <script>
-
-        window.addEventListener("DOMContentLoaded", () => {
-            const popup = document.getElementById("popup_job");
-            const storageKey = "popup_job_shown";
-
-            // 3 Sek für autom. PopUp
-            if (!localStorage.getItem(storageKey)) {
-            setTimeout(() => {
-                popup?.showPopover();
-                localStorage.setItem(storageKey, "1");
-            }, 1000);
-            }
-            
-            // Slider Logic
-            const slider = document.getElementById("slider");
-            if (slider) {
-                let index = 0;
-                function slideImages() {
-                    index = (index + 1) % 2; // Adjust if more images
-                    slider.style.transform = `translateX(-${index * 100}%)`;
-                }
-                setInterval(slideImages, 12000); // 12 seconds
-            }
-        });
-        </script>
     </footer>
 </body>
 </html>

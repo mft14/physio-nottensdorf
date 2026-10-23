@@ -131,18 +131,43 @@
 </main>
 
 <script>
-    // Opening Hours Highlighter
-    document.addEventListener("DOMContentLoaded", () => {
-        const now = new Date();
-        let day = now.getDay(); // 0 = So, 1 = Mo, ..., 6 = Sa
-        if (day === 0) day = 7;
-        const row = document.querySelector(`.opening-hours-table tr[data-day="${day}"]`);
-        if (row) {
-            row.querySelectorAll('td').forEach(td => {
-                td.classList.add('txt-darkgreen-500', 'table-cell-bold');
-            });
+// Opening Hours Highlighter
+document.addEventListener("DOMContentLoaded", () => {
+    const now = new Date();
+    let day = now.getDay(); // 0 = So, 1 = Mo, ..., 6 = Sa
+    if (day === 0) day = 7;
+    const row = document.querySelector(`.opening-hours-table tr[data-day="${day}"]`);
+    if (row) {
+        row.querySelectorAll('td').forEach(td => {
+            td.classList.add('txt-darkgreen-500', 'table-cell-bold');
+        });
+    }
+});
+
+// Popup Logic
+window.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("popup_job");
+    const storageKey = "popup_job_shown";
+
+    // 3 Sek für autom. PopUp
+    if (!localStorage.getItem(storageKey)) {
+    setTimeout(() => {
+        popup?.showPopover();
+        localStorage.setItem(storageKey, "1");
+    }, 1000);
+    }
+    
+// Slider Logic
+    const slider = document.getElementById("slider");
+    if (slider) {
+        let index = 0;
+        function slideImages() {
+            index = (index + 1) % 2; // Adjust if more images
+            slider.style.transform = `translateX(-${index * 100}%)`;
         }
-    });
+        setInterval(slideImages, 12000); // 12 seconds
+    }
+});
 </script>
 
 {% endblock content %}
