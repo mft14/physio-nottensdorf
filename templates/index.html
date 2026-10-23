@@ -5,15 +5,16 @@
     <!-- Slider -->
     <div class="slider-container">
         <div id="slider" class="slider">
-            <img src="{{ get_url(path="assets/header_collage1.jpg") }}" alt="Bild 1" class="slider-image fade-in" />
-            <img src="{{ get_url(path="assets/header_collage2.jpg") }}" alt="Bild 2" class="slider-image fade-in" />
+            <img src="{{ get_url(path='assets/header_collage1.jpg') }}" alt="Bild 1" class="slider-image fade-in">
+            <img src="{{ get_url(path='assets/header_collage2.jpg') }}" alt="Bild 2" class="slider-image fade-in">
         </div>
     </div>
 
-    <img src="{{ get_url(path="assets/logo.png") }}" id="praxislogo" alt="Logo" class="praxis-logo" />
+    <img src="{{ get_url(path='assets/logo.png') }}" id="praxislogo" alt="Logo" class="praxis-logo">
 
     <!-- Grid -->
     <div class="grid-container">
+
         <!-- Kontakt -->
         <div class="kachel fade-in text-center">
             <div class="uberschrift">Kontakt</div>
@@ -23,10 +24,13 @@
                 Tel: <a href="tel:04163900507">04163 900507</a><br>
                 Email: <a href="mailto:physio-nottensdorf@hotmail.com">physio-nottensdorf@hotmail.com</a><br>
             </p>
-            <p><h5>Team</h5>
+
+            <h5>Team</h5>
+                <p>            
                 Julia Kampmeier<br>
                 Andrea Orlowski<br>
-                Julitha Trapp</p>
+                Julitha Trapp
+                </p>
         </div>
 
         <!-- Öffnungszeiten -->
@@ -122,6 +126,7 @@
                 container: 'map',
             });
         </script>
+
     </div>
 </main>
 
@@ -131,7 +136,6 @@
         const now = new Date();
         let day = now.getDay(); // 0 = So, 1 = Mo, ..., 6 = Sa
         if (day === 0) day = 7;
-        
         const row = document.querySelector(`.opening-hours-table tr[data-day="${day}"]`);
         if (row) {
             row.querySelectorAll('td').forEach(td => {
@@ -140,4 +144,5 @@
         }
     });
 </script>
+
 {% endblock content %}

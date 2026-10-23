@@ -118,11 +118,14 @@ Quelle: [https://www.e-recht24.de](https://www.e-recht24.de)
 
 ## Verwendung von OpenStreetMap
 Auf dieser Website wird Kartenmaterial des Dienstes OpenStreetMap (OSM) eingebunden. Anbieter ist die OpenStreetMap Foundation (OSMF), St John’s Innovation Centre, Cowley Road, Cambridge, CB4 0WS, United Kingdom.
-OpenStreetMap wird verwendet, um geographische Informationen visuell darzustellen. Beim Aufruf der Karte wird eine Verbindung zu den Servern von OpenStreetMap hergestellt. Dabei können unter anderem folgende Daten an OSMF übermittelt werden:
+OpenStreetMap wird verwendet, um geographische Informationen visuell darzustellen. Beim Aufruf der Karte wird eine Verbindung zu den Servern von OpenStreetMap hergestellt.
+
+Dabei können unter anderem folgende Daten an OSMF übermittelt werden:
 - IP-Adresse des Nutzers,
 - Browser- und Gerätetyp,
 - Datum und Uhrzeit des Zugriffs,
 - aufgerufene Seite der Website.
+
 Diese Daten werden ausschließlich zur Darstellung der Karte und zur Gewährleistung der Funktionsfähigkeit des Dienstes verwendet. Es werden keine Cookies gesetzt und keine personenbezogenen Nutzerprofile erstellt.
 Die Nutzung von OpenStreetMap erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und zur leichten Auffindbarkeit der von uns angegebenen Orte. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Sofern Sie über unser Cookie-Banner Ihre Einwilligung zur Anzeige der Karte gegeben haben, ist Rechtsgrundlage Art. 6 Abs. 1 lit. a DSGVO.
 Weitere Informationen finden Sie in der Datenschutzerklärung der OpenStreetMap Foundation: [https://wiki.osmfoundation.org/wiki/Privacy_Policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy)

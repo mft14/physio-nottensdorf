@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Physio Nottensdorf{% endblock title %}</title>
-    <link rel="icon" type="image/png" href="{{ get_url(path="assets/favicon.png") }}">
-    <link href="{{ get_url(path="src/custom.css") }}" rel="stylesheet">
-    <script src="{{ get_url(path="src/maplibre-gl.js") }}"></script>
-    <link href="{{ get_url(path="src/maplibre-gl.css") }}" rel="stylesheet" />
-    <script type="module" src="{{ get_url(path="cookieconsent-config.js") }}"></script>
-    <link rel="stylesheet" href="{{ get_url(path="src/cookieconsent.css") }}">
-    {% block head %}{% endblock head %}
+    <link rel="icon" type="image/png" href="{{ get_url(path='assets/favicon.png') }}">
+    <link href="{{ get_url(path='src/custom.css') }}" rel="stylesheet">
+    <script src="{{ get_url(path='src/maplibre-gl.js') }}"></script>
+    <link href="{{ get_url(path='src/maplibre-gl.css') }}" rel="stylesheet">
+    <script type="module" src="{{ get_url(path='cookieconsent-config.js') }}"></script>
+    <link rel="stylesheet" href="{{ get_url(path='src/cookieconsent.css') }}">
+
+
 </head>
 <body>
     <header id="topbar">
@@ -45,8 +46,8 @@
         <div class="footer-content">
             <span>&copy; {{ now() | date(format="%Y") }} Physio Nottensdorf</span>
             <span><a href="#" id="openJobModal" class="footer_link">Stellenangebot</a></span>
-            <span><a href="{{ get_url(path="@/impressum.md") }}" class="footer_link">Impressum</a></span>
-            <span><a href="{{ get_url(path="@/datenschutz.md") }}" class="footer_link">Datenschutzerklärung</a></span>
+            <span><a href="{{ get_url(path='@/impressum.md') }}" class="footer_link">Impressum</a></span>
+            <span><a href="{{ get_url(path='@/datenschutz.md') }}" class="footer_link">Datenschutzerklärung</a></span>
         </div>
 
     <!-- Job Anzeige Popup -->
