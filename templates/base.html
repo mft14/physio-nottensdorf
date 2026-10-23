@@ -11,7 +11,6 @@
     <script type="module" src="{{ get_url(path='cookieconsent-config.js') }}"></script>
     <link rel="stylesheet" href="{{ get_url(path='src/cookieconsent.css') }}">
 
-
 </head>
 <body>
     <header id="topbar">
@@ -47,9 +46,10 @@
             <span>&copy; {{ now() | date(format="%Y") }} Physio Nottensdorf</span>
             <!-- <span><a href="#" id="openJobModal" class="footer_link">Stellenangebot</a></span> -->
 
-            <span><button class="button-job" popovertarget="popup_job">Stellenangebote</button></span>
             <span><a href="{{ get_url(path='@/impressum.md') }}" class="footer_link">Impressum</a></span>
             <span><a href="{{ get_url(path='@/datenschutz.md') }}" class="footer_link">Datenschutzerklärung</a></span>
+            <span><button class="button-job" popovertarget="popup_job">Stellenangebote</button></span>
+            <span><button class="button-job" type="button" data-cc="show-preferencesModal">Cookies</button></span>
         </div>
 
 

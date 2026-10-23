@@ -31,7 +31,7 @@ CookieConsent.run({
                     acceptAllBtn: "Alle akzeptieren",
                     acceptNecessaryBtn: "Alle ablehnen",
                     showPreferencesBtn: "Einstellungen verwalten",
-                    footer: "<a href=\"dsgvo.html\">Datenschutz</a>\n<a href=\"imp.html\">Impressum</a>"
+                    footer: ""
                 },
                 preferencesModal: {
                     title: "Präferenzen für die Zustimmung",
