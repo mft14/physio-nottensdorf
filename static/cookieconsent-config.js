@@ -1,6 +1,7 @@
 import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js';
 
 CookieConsent.run({
+    autoShow: true,    
     guiOptions: {
         consentModal: {
             layout: "box",
@@ -19,7 +20,7 @@ CookieConsent.run({
         necessary: {
             readOnly: true
         },
-        analytics: {}
+        functionality: {}
     },
     language: {
         default: "de",
@@ -51,16 +52,16 @@ CookieConsent.run({
                             linkedCategory: "necessary"
                         },
                         {
-                            title: "Analytische Cookies",
-                            description: "Diese Cookies ermöglichen es uns, Besuche und Traffic-Quellen zu zählen, damit wir die Leistung unserer Website messen und verbessern können. Sie helfen uns zu wissen, welche Seiten am meisten und am wenigsten beliebt sind und wie sich Besucher auf der Website bewegen. Alle Informationen, die diese Cookies sammeln, sind aggregiert und daher anonym. Wenn Sie diese Cookies nicht zulassen, wissen wir nicht, wann Sie unsere Website besucht haben.",
-														toggle: {
-																value: "analytics",
-																enabled: "Aktiviert",
-																disabled: "Deaktiviert"
-														},
-
-                            linkedCategory: "analytics"
+                            title: "Funktionelle Cookies & Externe Medien",
+                            description: "Diese Cookies und externen Dienste ermöglichen es uns, erweiterte Funktionen und interaktive Inhalte bereitzustellen, wie beispielsweise das Anzeigen von Lageplänen und Landkarten. Wenn Sie diese Cookies nicht zulassen, können diese Dienste (z. B. Kartendienste) nicht korrekt angezeigt werden, und einige Bereiche der Website sind eventuell nicht nutzbar.",
+                            toggle: {
+                                value: "functionality", // Oder "targeting", je nachdem wie Ihre Kategorie heißt
+                                enabled: "Aktiviert",
+                                disabled: "Deaktiviert"
+                            },
+                            linkedCategory: "functionality" // Muss mit dem Namen unter 'categories' übereinstimmen
                         },
+,
                         {
                             title: "Weitere Informationen",
                             description: "Weitere Informationen zu den von uns verwendeten Cookies finden Sie in unserer Datenschutzerklärung.",

@@ -108,24 +108,55 @@
         </div>
 
         <!-- Karte -->
-        <div id="karte"></div>
-
-        <script type="text/plain" data-category="analytics">
-            // Karte einfügen
-            document.getElementById('karte').innerHTML = `
-                <div class="kachel fade-in">
-                    <div class="uberschrift">Lage der Praxis</div>
-                    <div id="map" style="width: 100%; height: 500px"></div>
+        <div id="karte">
+            <div class="kachel fade-in">
+                <div class="uberschrift">Lage der Praxis</div>
+        
+                <!-- Die Platzhalter-Box, die angezeigt wird, solange keine Zustimmung vorliegt -->
+                <div id="map-placeholder" style="width: 100%; height: 500px; background: #f5f5f5; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #ddd; padding: 20px; text-align: center;">
+                    <p style="padding: 2em;">
+                        Um die interaktive Karte zu sehen, aktivieren Sie bitte die funktionellen Cookies. Dabei werden Daten vom Kartendienst (OpenFreeMap) geladen.
+                    </p>
+                    <!-- Dieser Button öffnet bei Klick sofort das Einstellungs-Modal von CookieConsent -->
+                    <button type="button" data-cc="show-preferencesModal" class="btn-close-modal">
+                        Karte erlauben
+                    </button>
                 </div>
-            `;
+            </div>
+        </div>
 
-            const map = new maplibregl.Map({
-                style: 'https://tiles.openfreemap.org/styles/liberty',
-                center: [9.6035, 53.4829],
-                zoom: 17.3,
-                container: 'map',
-            });
-        </script>
+        <script type="text/plain" data-category="functionality">
+        // 1. Den gesamten Inhalt (inklusive Platzhalter) durch die echte Karte ersetzen
+        document.getElementById('karte').innerHTML = `
+            <div class="kachel fade-in">
+                <div class="uberschrift">Lage der Praxis</div>
+                <div id="map" style="width: 100%; height: 500px"></div>
+            </div>
+        `;
+
+        // 2. Die MapLibre-Karte wie gewohnt initialisieren
+        const map = new maplibregl.Map({
+            style: 'https://tiles.openfreemap.org/styles/liberty',
+            center: [9.6035, 53.4829],
+            zoom: 17.3,
+            container: 'map',
+        });
+
+        // Scroll-Zoom standardmäßig ausschalten
+        map.scrollZoom.disable();
+
+        // Reaktivieren, wenn die STRG-Taste gedrückt wird
+        map.on('wheel', (event) => {
+            if (event.originalEvent.ctrlKey) {
+                event.originalEvent.preventDefault(); // Browser-Zoom verhindern
+                map.scrollZoom.enable();
+            } else {
+                map.scrollZoom.disable();
+            }
+        });        
+
+    </script>
+
 
     </div>
 </main>
