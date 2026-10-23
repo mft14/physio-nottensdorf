@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Impressum - Physio Nottensdorf</title>
-    <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link href="../src/custom.css" rel="stylesheet">
-    <script src="../src/maplibre-gl.js"></script>
-    <link href="../src/maplibre-gl.css" rel="stylesheet">
-    <script type="module" src="../cookieconsent-config.js"></script>
-    <link rel="stylesheet" href="../src/cookieconsent.css">
-    
+    <title>{% block title %}Physio Nottensdorf{% endblock title %}</title>
+    <link rel="icon" type="image/png" href="{{ get_url(path="assets/favicon.png") }}">
+    <link href="{{ get_url(path="src/custom.css") }}" rel="stylesheet">
+    <script src="{{ get_url(path="src/maplibre-gl.js") }}"></script>
+    <link href="{{ get_url(path="src/maplibre-gl.css") }}" rel="stylesheet" />
+    <script type="module" src="{{ get_url(path="cookieconsent-config.js") }}"></script>
+    <link rel="stylesheet" href="{{ get_url(path="src/cookieconsent.css") }}">
+    {% block head %}{% endblock head %}
 </head>
 <body>
     <header id="topbar">
@@ -39,56 +39,14 @@
         </div>
     </header>
 
-    
-<main class="kachelblock">
-    <a href="../index.html"><img src="../assets/logo.png" id="praxislogo" alt="Logo" style="display: block; margin: 2.5rem auto; max-width: 250px;"></a>
-    <a href="../index.html" style="padding: 0 1rem; color: var(--color-darkgreen); text-decoration: none;">&larr; Zurück zur Startseite</a>
-
-    <div class="legal-content" style="padding: 1rem;">
-        <h1 id="impressum">Impressum</h1>
-<h2 id="physio-training-nottensdorf">Physio &amp; Training Nottensdorf</h2>
-<p>Am Gutspark 7<br>
-21640 Nottensdorf</p>
-<p>Tel: 04163 900 507<br>
-Email: physio-nottensdorf@hotmail.com</p>
-<p>Steuernummer: DE449560543</p>
-<hr>
-<h2 id="verantwortlich-fur-den-inhalt-nach-ss-55-abs-2-rstv">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
-<p>Physio &amp; Training Nottensdorf<br>
-Julia Kampmeier</p>
-<p>Inhaltlich Verantwortliche gemäß § 55 Abs. 2 RStV: Julia Kampmeier<br>
-Anschrift und Telefon: siehe oben</p>
-<ul>
-<li>Webdesign: Karim Kiel</li>
-<li>Text und Bildquellen: Julia Kampmeier</li>
-<li>Zitat: Sebastian Kneipp</li>
-<li>Vektorgrafik und Icons: SVG Repo (https://www.svgrepo.com)</li>
-<li>Karte: MapLibre (https://maplibre.org/)</li>
-</ul>
-<p>Haftung für den Inhalt: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
-<h2 id="haftungsausschluss-disclaimer">Haftungsausschluss - Disclaimer</h2>
-<h3 id="haftung-fur-inhalte"><u>Haftung für Inhalte</u></h3>
-<p>Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.</p>
-<p>Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte unverzüglich entfernen.</p>
-<h3 id="haftungsbeschrankung-fur-externe-links"><u>Haftungsbeschränkung für externe Links</u></h3>
-<p>Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder indirekt verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die „externen Links“ auch keine Gewähr auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind die jeweilige Anbieter oder Betreiber (Urheber) der Seiten verantwortlich.</p>
-<p>Die externen Links wurden zum Zeitpunkt der Linksetzung auf eventuelle Rechtsverstöße überprüft und waren im Zeitpunkt der Linksetzung frei von rechtswidrigen Inhalten. Eine ständige inhaltliche Überprüfung der externen Links ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht möglich. Bei direkten oder indirekten Verlinkungen auf die Webseiten Dritter, die außerhalb unseres Verantwortungsbereichs liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall nur bestehen, wenn wir von den Inhalten Kenntnis erlangen und es uns technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.</p>
-<p>Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes „physio-nottensdorf.de“ gesetzten Links und Verweise von Fragestellern, Blogeinträgern, Gästen des Diskussionsforums. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.</p>
-<p>Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unverzüglich entfernt.</p>
-<h3 id="urheberrecht"><u>Urheberrecht</u></h3>
-<p>Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung des geistigen Eigentums in ideeller und materieller Sicht des Urhebers außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Urhebers i.S.d. Urhebergesetzes. Downloads und Kopien dieser Seite sind nur für den privaten und nicht kommerziellen Gebrauch erlaubt. Sind die Inhalte auf unserer Webseite nicht von uns erstellt wurden, sind die Urheberrechte Dritter zu beachten. Die Inhalte Dritter werden als solche kenntlich gemacht. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte unverzüglich entfernen.</p>
-<p>Dieses Impressum wurde freundlicherweise von jurarat.de zur Verfügung gestellt.</p>
-
-    </div>
-</main>
-
+    {% block content %}{% endblock content %}
 
     <footer>
         <div class="footer-content">
-            <span>&copy; 2026 Physio Nottensdorf</span>
+            <span>&copy; {{ now() | date(format="%Y") }} Physio Nottensdorf</span>
             <span><a href="#" id="openJobModal" class="footer_link">Stellenangebot</a></span>
-            <span><a href="#top" class="footer_link">Impressum</a></span>
-            <span><a href="../datenschutz/index.html" class="footer_link">Datenschutzerklärung</a></span>
+            <span><a href="{{ get_url(path="@/impressum.md") }}" class="footer_link">Impressum</a></span>
+            <span><a href="{{ get_url(path="@/datenschutz.md") }}" class="footer_link">Datenschutzerklärung</a></span>
         </div>
 
     <!-- Job Anzeige Popup -->
@@ -100,7 +58,7 @@ Anschrift und Telefon: siehe oben</p>
                 <p><strong>Physiotherapeut*in</strong></p>
                 <p><strong>auf Minijob Basis</strong></p>
                 <p><strong>oder Teilzeit (ca. 10-15 Stunden)</strong></p>
-                <p>Bei Interesse Näheres gerne persönlich. Kontaktieren Sie uns einfach unter </p>
+                <p>bei Interesse gerne Näheres gerne persönlich, kontaktieren Sie uns einfach unter </p>
                 <p><a class="txt-darkgreen-500" href="mailto:physio-nottensdorf@hotmail.com">physio-nottensdorf@hotmail.com</a></p>
                 <p><small>oder</small></p>
                 <p>Physio & Training Nottensdorf, Am Gutspark 7, 21640 Nottensdorf, 04163/900507</p>

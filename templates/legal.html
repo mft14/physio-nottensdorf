@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - Physio Nottensdorf{% endblock title %}
+
+{% block content %}
+<main class="kachelblock">
+    <img src="{{ get_url(path="assets/logo.png") }}" id="praxislogo" alt="Logo" style="display: block; margin: 2.5rem auto; max-width: 250px;" />
+    <a href="{{ get_url(path="@/_index.md") }}" style="padding: 0 1rem; color: var(--color-darkgreen); text-decoration: none;">&larr; Zurück zur Startseite</a>
+
+    <div class="legal-content" style="padding: 1rem;">
+        {{ page.content | safe }}
+    </div>
+</main>
+{% endblock content %}

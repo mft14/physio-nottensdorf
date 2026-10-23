@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <!-- Slider -->
+    <div class="slider-container">
+        <div id="slider" class="slider">
+            <img src="{{ get_url(path="assets/header_collage1.jpg") }}" alt="Bild 1" class="slider-image fade-in" />
+            <img src="{{ get_url(path="assets/header_collage2.jpg") }}" alt="Bild 2" class="slider-image fade-in" />
+        </div>
+    </div>
+
+    <img src="{{ get_url(path="assets/logo.png") }}" id="praxislogo" alt="Logo" class="praxis-logo" />
+
+    <!-- Grid -->
+    <div class="grid-container">
+        <!-- Kontakt -->
+        <div class="kachel fade-in text-center">
+            <div class="uberschrift">Kontakt</div>
+            <p>
+                Am Gutspark 7<br>
+                21640 Nottensdorf<br>
+                Tel: <a href="tel:04163900507">04163 900507</a><br>
+                Email: <a href="mailto:physio-nottensdorf@hotmail.com">physio-nottensdorf@hotmail.com</a><br>
+            </p>
+            <p><h5>Team</h5>
+                Julia Kampmeier<br>
+                Andrea Orlowski<br>
+                Julitha Trapp</p>
+        </div>
+
+        <!-- Öffnungszeiten -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Öffnungszeiten</div>
+            <table class="opening-hours-table" style="width: 100%;">
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="1">
+                    <td class="table-cell-left">Mo:</td>
+                    <td>08:00 - 14:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="2">
+                    <td class="table-cell-left">Di:</td>
+                    <td>09:30 - 12:30 Uhr + 14:00 - 19:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="3">
+                    <td class="table-cell-left">Mi:</td>
+                    <td>07:30 - 14:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="4">
+                    <td class="table-cell-left">Do:</td>
+                    <td>09:30 - 12:30 Uhr + 14:00 - 19:00 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="5">
+                    <td class="table-cell-left">Fr:</td>
+                    <td>07:30 - 13:30 Uhr</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="6">
+                    <td class="table-cell-left">Sa:</td>
+                    <td>geschlossen</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-tr-border);" data-day="7">
+                    <td class="table-cell-left">So:</td>
+                    <td>geschlossen</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Über Uns -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Über Uns</div>
+            <p class="text-justify">
+                Unsere Praxis steht für eine umfassende und ganzheitliche Betreuung unserer Patienten und vielen Sportlern aus verschiedenen Bereichen. 
+                Parallel oder im Anschluss an die Behandlung verhelfen wir unseren Patienten mit modernen und gezielten physiotherapeutischen Maßnahmen 
+                zur Linderung der Beschwerden bis hin zur vollständigen Genesung.
+                Gehen wir den Weg gemeinsam an.
+            </p>
+        </div>
+
+        <!-- Motto -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Unser Motto</div>
+            <blockquote class="quote-block">
+                <svg class="quote-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+                </svg>
+                <p class="quote-text">Wer nicht jeden Tag etwas Zeit für seine Gesundheit aufbringt, <br>wird eines Tages viel Zeit für seine Krankheit opfern müssen.</p>
+                <p class="quote-author">Sebastian Kneipp</p>
+            </blockquote>
+        </div>
+
+        <!-- Leistungen -->
+        <div class="kachel fade-in">
+            <div class="uberschrift">Unser Leistungsangebot</div>
+            <ul class="service-list">
+                <li>Krankengymnastik / Physiotherapie</li>
+                <li>Krankengymnastik am Gerät</li>
+                <li>Skoliosetherapie nach Lehnert Schroth</li>
+                <li>Manuelle Lymphdrainage (nach OP's)</li>
+                <li>Präventionskurs nach § 20 Pilates und Functional Training (Krankenkassenzuschuss)</li>
+                <li>Elektrotherapie</li>
+                <li>Medical Flossing</li>
+                <li>Kinesio Taping</li>
+                <li>Wärme- und Kältetherapie</li>
+            </ul>
+        </div>
+
+        <!-- Karte -->
+        <div id="karte"></div>
+
+        <script type="text/plain" data-category="analytics">
+            // Karte einfügen
+            document.getElementById('karte').innerHTML = `
+                <div class="kachel fade-in">
+                    <div class="uberschrift">Lage der Praxis</div>
+                    <div id="map" style="width: 100%; height: 500px"></div>
+                </div>
+            `;
+
+            const map = new maplibregl.Map({
+                style: 'https://tiles.openfreemap.org/styles/liberty',
+                center: [9.6035, 53.4829],
+                zoom: 17.3,
+                container: 'map',
+            });
+        </script>
+    </div>
+</main>
+
+<script>
+    // Opening Hours Highlighter
+    document.addEventListener("DOMContentLoaded", () => {
+        const now = new Date();
+        let day = now.getDay(); // 0 = So, 1 = Mo, ..., 6 = Sa
+        if (day === 0) day = 7;
+        
+        const row = document.querySelector(`.opening-hours-table tr[data-day="${day}"]`);
+        if (row) {
+            row.querySelectorAll('td').forEach(td => {
+                td.classList.add('txt-darkgreen-500', 'table-cell-bold');
+            });
+        }
+    });
+</script>
+{% endblock content %}
